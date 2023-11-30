@@ -1,0 +1,58 @@
+@import '../../../styles/card.scss';
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+}
+
+.ticket-form {
+  max-width: 400px; 
+  margin: 0 auto;
+  padding: 20px; 
+  background-color: #f4f4f4; 
+  border-radius: $borderRadius; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+}
+
+h3 {
+  font-size: 1.8em; 
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  color: #555; 
+}
+
+.input-custom,
+select {
+  border: 2px solid #3498db;
+  border-radius: $borderRadius;
+  height: 40px; 
+  width: 100%;
+  margin-bottom: 15px; 
+  padding: 10px;
+  box-sizing: border-box; 
+}
+
+
+.btn-custom {
+  background-color: #e74c3c; 
+  border: none;
+  border-radius: $borderRadius;
+  color: #ffffff; 
+  cursor: pointer;
+  font-size: 1.2em; 
+  height: 45px; 
+  width: 100%;
+  transition: background-color 0.3s; 
+}
+
+.btn-custom:hover {
+  background-color: #c0392b; 
+}

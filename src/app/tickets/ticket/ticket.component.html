@@ -1,0 +1,50 @@
+<div class="card ticket"  (click)="selectTicket()">
+  <h3>Titre :{{ticket.title}}</h3>
+  <h3>Description :{{ticket.description}}</h3>
+
+  
+  <!-- <h3>student :{{ticket.student}}</h3>   -->
+  <h3>student: {{ticket.student?.prenom| uppercase}} {{ticket.student?.nom }}</h3>  
+
+  
+  <h3>
+  <i *ngIf="ticket.major === 'Hypermedia'" class="fas fa-solid fa-file"></i>
+  <i *ngIf="ticket.major === 'IA'" class="fas fa-globe-europe"></i>
+  <i *ngIf="ticket.major === 'CPI'" class="fas fa-dna"></i>
+  <i *ngIf="ticket.major === 'Bigdata'" class="fas fa-solid fa-star fa-inverse" ></i>
+  <i *ngIf="ticket.major === 'Embarque'" class="fas fa-handshake"></i>
+     major :{{ticket.major}}
+    </h3>
+
+  
+  <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}} &nbsp;&nbsp;
+  <i class="far fa-user"></i> {{ticket.author}}
+
+  <td><button type="button" (click)='deleteTicket()'>Delete</button></td>
+  
+  <td>
+    <button type="button" (click)="archiveTicket()">
+      <span *ngIf="!ticket.archived">Archiver</span>
+      <span *ngIf="ticket.archived">c'est archivé</span>
+    </button>
+  </td>
+  
+
+</div>
+
+
+
+
+
+
+
+<!-- Exo2
+<li *ngIf="person.country ==='UK'"
+      class="text-success">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngIf="person.country === 'USA'"
+      class="text-primary">{{ person.name }} ({{ person.country }})
+  </li>
+
+
+source: https://codecraft.tv/courses/angular/built-in-directives/ngif-and-ngswitch/   -->

@@ -1,0 +1,15 @@
+
+<button (click)="navigateToTicketPage()" class="button" >allerr vers tickets</button>
+<app-student-form (studentAdded)="onStudentAdded()" ></app-student-form>
+<div *ngIf="students">
+  <h2>Liste des étudiants</h2>
+  
+  <ul>
+    
+    <li *ngFor="let student of students" class="cookie-card" >
+      <h4>Nom: {{ student.nom }}  </h4> 
+      <h4>Prenom: {{ student.prenom }}</h4> 
+      <app-student (deleteStudent)="onDeleteStudent($event)" [student]="student"></app-student>
+    </li>
+  </ul>
+</div>
