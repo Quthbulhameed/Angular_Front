@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "nom": "Bob1",
+      "prenom": "Bob2"
+    },
+    {
+      "id": 2,
+      "nom": "Alice1",
+      "prenom": "Alice2"
+    },
+    {
+      "id": 3,
+      "nom": "zaza1",
+      "prenom": "zaza2"
+    },
+    {
+      "nom": "URBANISME1",
+      "prenom": "Quthbulhameed",
+      "id": 4
+    },
+    {
+      "nom": "test222",
+      "prenom": "test22",
+      "id": 5
+    },
+    {
+      "nom": "test3",
+      "prenom": "test22",
+      "id": 6
+    },
+    {
+      "nom": "lolo",
+      "prenom": "aa",
+      "id": 7
+    }
+  ]
+}

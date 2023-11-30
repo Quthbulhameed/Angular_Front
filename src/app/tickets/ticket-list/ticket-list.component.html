@@ -1,0 +1,19 @@
+<div class="ticket-list">
+  <button (click)="navigateToTicketPage()">allerr vers Etudiants</button>
+ 
+  <button (click)="displayTicketArchived = !displayTicketArchived">
+    {{displayTicketArchived ? 'Cache les tickets archives ' : 'Affiche  tout les Tickets'}} 
+  </button>
+  <div class="ticket" *ngFor="let ticket of ticketList">
+
+    
+      <span *ngIf="!ticket.archived || displayTicketArchived">
+        <app-ticket [ticket]="ticket" (ticketHasBeenSelected)="ticketHasBeenSelected($event)"
+          (ticketHasBeenArchived)="ArchiveTicket($event)" (delete)="deleteTicket($event)"></app-ticket>
+      </span>
+    </div>
+
+    
+  
+  
+</div>
